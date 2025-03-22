@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: blue;
+}
+
+.main{
+    max-width: 1200px;
+    margin:auto;
+}
+
+.heading-section{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
+}
+
+.heading-section .heading-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.input-section, .todo-content{
+    margin: 0 10px;
+}
+
+.input-section{
+    display: flex;
+    align-items: center;
+}
+
+.input-section form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: rgb(18, 18, 49);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input-section form input{
+    padding: 20px 10px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(8, 8, 32, 0.788);
+    font-size: larger;
+    color:aliceblue;
+}
+
+.input-section form button{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+.input-section form button img{
+    width:100%;
+}
+
+.todo-content .Incomplete-tasks, .complete-tasks{
+    margin: 10px 0;
+}
+
+.todo-content .Incomplete-tasks .content, .complete-tasks .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color:aliceblue;
+}
+
+.todo-content .Incomplete-tasks button, .complete-tasks button
+{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.todo-content .Incomplete-tasks .title, .complete-tasks .title{
+    font-size: 1.5em;
+    color:grey;
+    text-transform: uppercase;
+}
+
+.todo-content .Incomplete-tasks .button1{
+    background: green;
+}
+
+.todo-content .Incomplete-tasks .button2{
+    background: grey;
+}
+
+.todo-content .Incomplete-tasks .button3{
+    background: red;
+}
+
+.todo-content .Incomplete-tasks .buttons, .complete-tasks .buttons{
+    margin: 10px 0;
+}
+
+.todo-content .Incomplete-tasks .content{
+    background: rgb(7, 7, 27);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.todo-content .complete-tasks .content{
+    background: rgba(7, 7, 27, 0.623);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.todo-content .complete-tasks .heading-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-content .complete-tasks p{
+    text-decoration: line-through;
+}
+
+.todo-content .complete-tasks .heading-content .clear-all{
+    background: red;
+    display: none;
+}
+
+.todo-content .complete-tasks .button1{
+    background: red;
+}
+
+.todo-content .complete-tasks .button2{
+    background: green;
+}
+
+.edit-section{
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    display: none;
+
+}
+
+.edit-section form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(18, 18, 49);
+    width: 100%;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.edit-section form input{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    width: 90%;
+    border-radius: 10px;
+    background:rgba(8, 8, 32, 0.788);
+    color:aliceblue;
+    font-size: larger;
+}
+
+.edit-section form button{
+    width: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:transparent;
+    cursor: pointer;
+}
+
+.edit-section form button img{
+    width: 100%;
+}
+
+p{
+    text-align: center;
+}
+
+.warning{
+    padding: 20px;
+    background: red;
+    color:aliceblue;
+    font-size: 1.5em;
+    position: fixed;
+    top:-50%;
+    left:0;
+    right: 0;
+}
+
+.warningAnimation{
+    animation-name: warn;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes warn {
+    from{
+        top:-50%;
+    }
+    to{
+        top:0;
+    }
+}

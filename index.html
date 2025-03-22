@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loading()">
+    
+    <main class="main">
+        <section class="heading-section">
+            <h1 class="heading-title">
+                Chorces
+            </h1>
+        </section>
+
+        <section class="input-section">
+            <form action="">
+                <input type="text" class="input-todo">
+                <button type="button" class="submit-todo" onclick="createTask()">
+                    <img src="icons/add (1).png" alt="">
+                </button>
+            </form>
+        </section>
+
+        <section class="todo-content">
+            <section class="Incomplete-tasks">
+
+                <h2 class="title">ToDo</h2>
+                <div class="incomplete">
+                    
+                </div>
+            </section>
+
+
+            <hr>
+
+            <section class="complete-tasks">
+
+                    <div class="heading-content">
+                        <h2 class="title">Complete</h2>
+                        <button class="clear-all" onclick="clearAllcompleteTasks()">Clear</button>
+                    </div>
+                    <div class="complete">
+                      
+                    </div>
+            </section>
+        </section>
+
+        <section class="edit-section">
+            <form action="">
+                <input type="text" class="Task-id" hidden>
+                <input type="text" class="edit-content">
+                <button type="button" class="update-button" onclick="updateTask()">
+                    <img src="/icons/edit.png" alt="">
+                </button>
+            </form>
+        </section>
+
+        <div class="warning">
+            <p>Please enter a task before submitting</p>
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
